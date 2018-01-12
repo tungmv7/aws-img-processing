@@ -1,0 +1,19 @@
+{
+  "name": "image-processing",
+  "version": "1.0.0",
+  "description": "image processing lambda",
+  "main": "index.js",
+  "dependencies": {
+    "claudia": "^3.1.0",
+    "imagemin": "^5.3.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.1"
+  },
+  "scripts": {
+    "start": "claudia create --name image-processing --region us-west-1 --handler index.handler",
+    "test": "claudia test-lambda --event events.json",
+    "deploy": "claudia update"
+  },
+  "author": "Tung",
+  "license": ""
+}

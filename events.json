@@ -1,0 +1,38 @@
+{
+    "Records": [
+        {
+            "eventVersion": "2.0",
+            "eventSource": "aws:s3",
+            "awsRegion": "us-west-1",
+            "eventTime": "2018-01-12T02:49:25.998Z",
+            "eventName": "ObjectCreated:Put",
+            "userIdentity": {
+                "principalId": "A10CGELNA65745"
+            },
+            "requestParameters": {
+                "sourceIPAddress": "116.100.37.139"
+            },
+            "responseElements": {
+                "x-amz-request-id": "83ECF261017840F1",
+                "x-amz-id-2": "Q4M8Dcq1FpTYcoWzOhZOW+72eyilo6mw5cx2i4qJHRzS3AEST/Vi4P1uJhmYIW7CjaoHllJzkyI="
+            },
+            "s3": {
+                "s3SchemaVersion": "1.0",
+                "configurationId": "YjA4YTllOTYtN2NiMy00OGZhLWE0MzMtZjA4YzE3MzA3N2Fm",
+                "bucket": {
+                    "name": "sesh-test-us",
+                    "ownerIdentity": {
+                        "principalId": "A10CGELNA65745"
+                    },
+                    "arn": "arn:aws:s3:::sesh-test-us"
+                },
+                "object": {
+                    "key": "in/",
+                    "size": 0,
+                    "eTag": "d41d8cd98f00b204e9800998ecf8427e",
+                    "sequencer": "005A582235F1D53700"
+                }
+            }
+        }
+    ]
+}
