@@ -34,24 +34,24 @@ module.exports = function convert(bucket, fileKey, callback) {
 	s3.getObject(params, function(err, data){
 		console.log(err);
 		console.log(data);
-		// imagemin.buffer(data.Body, {
-		// 	plugins: [
-		// 		imageminJpegtran(),
-		// 		imageminPngquant({quality: '65-80'})
-		// 	],
-		// 	use:[
-		// 		imageminJpegtran(),
-		// 		imageminPngquant({quality: '65-80'})
-		// 	]
-		// }).then(function(files){
-		// 	console.log(files);
-		// 	s3.upload({
-		// 		Bucket: bucket,
-		// 		Key: fileKey.replace(/^in/, 'out'),
-		// 		Body: files,
-		// 		ACL: 'private'
-		// 	}, callback);
-		// });
-		// console.log('done');
+		imagemin.buffer(data.Body, {
+			plugins: [
+				imageminJpegtran(),
+				imageminPngquant({quality: '65-80'})
+			],
+			use:[
+				imageminJpegtran(),
+				imageminPngquant({quality: '65-80'})
+			]
+		}).then(function(files){
+			console.log(files);
+			s3.upload({
+				Bucket: bucket,
+				Key: fileKey.replace(/^in/, 'out'),
+				Body: files,
+				ACL: 'private'
+			}, callback);
+		});
+		console.log('done');
 	});
 };
