@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "image-processing-executor",
+    "name": "image-processing",
+    "region": "us-west-1"
+  }
+}
